@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
     unsigned char byte;
     while (input.read(reinterpret_cast<char*>(&byte), sizeof(byte)))
     {
-        oss << "0x" << std::setw(2) << static_cast<int>(byte) << " ";
+        oss << "0x" << std::setw(2) << static_cast<int>(byte) << ",  "; // где стоит запятая в кавычках можно ее убрать вместе с пробелом если вам нужны байты в виде 0xXX 0xXX без пробелов, если с пробелами то оставляете как было, пример 0xXX, 0xXX
     }
     output << oss.str() << "\n";
 
